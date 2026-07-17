@@ -117,8 +117,8 @@
 <p class="subtitle">골드 마블 세이렌 — 확률형 콘텐츠 정보 공개</p>
 
 <div class="meta">
-  <div><b>최종 갱신</b>: 2026-07-06 (등급별 획득 가능 마블 프렌즈 전체 목록 + 개별 확률 추가 — §7)</div>
-  <div><b>기준 데이터</b>: <code>fish.json v4 (220종)</code> / <code>egg_drop.json</code> / <code>hatch.json</code> / <code>shop_packages.json v10</code> / <code>game_config.gd</code></div>
+  <div><b>최종 갱신</b>: 2026-07-17 (v1.0.4 — 비(황금) 확률 20%→30% + 천장 보장 신설, 마블 해방 비용 개편, 어종 교체: 갈색가오리→꽃게)</div>
+  <div><b>기준 데이터</b>: <code>fish.json (2026-07-17, 220종 등록/201종 등장)</code> / <code>egg_drop.json</code> / <code>hatch.json (2026-07-17)</code> / <code>game_config.gd</code> / 서버 <code>event.py (RAIN_CHANCE 0.30, RAIN_PITY 10)</code></div>
   <div><b>개발사</b>: 임팩트게임즈 (사업자등록번호 583-09-03238)</div>
   <div><b>문의</b>: <a href="mailto:support@impactgames.co.kr">support@impactgames.co.kr</a></div>
   <div style="margin-top:8px;font-size:12px;color:#888;">한국 게임산업진흥에 관한 법률 제33조 제2항 (2024 시행) 확률형 아이템 정보공개 의무 대응.</div>
@@ -165,39 +165,42 @@
   <tr><td>일반</td><td>보라</td><td>normal pool (§4-1)</td></tr>
   <tr><td>비</td><td>황금</td><td>rain pool (§4-2) — 에픽/레전더리</td></tr>
 </table>
-<p>비 (=황금) 확률: 매 이벤트 새로 굴림. <b>20%</b> 비 / <b>80%</b> 일반.</p>
+<p>비 (=황금) 확률: 매 이벤트 새로 굴림. <b>30%</b> 비 / <b>70%</b> 일반.</p>
+<div class="info">
+  <b>천장 (보장) 시스템</b>: 일반(보라)이 <b>9회 연속</b> 발생하면 <b>10번째 이벤트 구슬은 확정 비(황금)</b>으로 생성됩니다 (서버 권위 카운터, 비 발생 시 초기화). 즉 황금 구슬은 최대 10회 이내에 반드시 1회 이상 등장하며, 이 보장으로 실제 황금 등장 비율은 기본 30% 보다 소폭 높아질 수 있습니다 (유저에게 유리한 방향).
+</div>
 
 <h2>4. 이벤트 구슬 → 마블 등급 추첨</h2>
 
-<h3>4-1. 보라 구슬 (normal pool) — 80% 발생</h3>
+<h3>4-1. 보라 구슬 (normal pool) — 70% 발생</h3>
 <table>
-  <tr><th>마블 등급</th><th>풀 내 확률</th><th>전체 확률 (× 80%)</th></tr>
-  <tr><td>노말</td><td class="right">34.43%</td><td class="right">27.54%</td></tr>
-  <tr><td>매직</td><td class="right">31.43%</td><td class="right">25.14%</td></tr>
-  <tr><td>레어</td><td class="right">28.57%</td><td class="right">22.86%</td></tr>
-  <tr><td>에픽</td><td class="right">5.57%</td><td class="right">4.46%</td></tr>
+  <tr><th>마블 등급</th><th>풀 내 확률</th><th>전체 확률 (× 70%)</th></tr>
+  <tr><td>노말</td><td class="right">34.43%</td><td class="right">24.10%</td></tr>
+  <tr><td>매직</td><td class="right">31.43%</td><td class="right">22.00%</td></tr>
+  <tr><td>레어</td><td class="right">28.57%</td><td class="right">20.00%</td></tr>
+  <tr><td>에픽</td><td class="right">5.57%</td><td class="right">3.90%</td></tr>
   <tr><td>레전더리</td><td class="right"><b>0%</b></td><td class="right">0%</td></tr>
 </table>
 
-<h3>4-2. 황금 구슬 (rain pool, 에픽+) — 20% 발생</h3>
+<h3>4-2. 황금 구슬 (rain pool, 에픽+) — 30% 발생</h3>
 <table>
-  <tr><th>마블 등급</th><th>풀 내 확률</th><th>전체 확률 (× 20%)</th></tr>
+  <tr><th>마블 등급</th><th>풀 내 확률</th><th>전체 확률 (× 30%)</th></tr>
   <tr><td>노말</td><td class="right"><b>0%</b></td><td class="right">0%</td></tr>
   <tr><td>매직</td><td class="right"><b>0%</b></td><td class="right">0%</td></tr>
   <tr><td>레어</td><td class="right"><b>0%</b></td><td class="right">0%</td></tr>
-  <tr><td>에픽</td><td class="right">50%</td><td class="right">10.00%</td></tr>
-  <tr><td>레전더리</td><td class="right">50%</td><td class="right">10.00%</td></tr>
+  <tr><td>에픽</td><td class="right">50%</td><td class="right">15.00%</td></tr>
+  <tr><td>레전더리</td><td class="right">50%</td><td class="right">15.00%</td></tr>
 </table>
 
 <h3>4-3. 합산 — 이벤트 1회당 마블 등급별 누적 확률</h3>
 <table>
-  <tr><th>마블 등급</th><th>보라 (80%)</th><th>황금 (20%)</th><th>합산</th></tr>
-  <tr><td>노말</td><td class="right">27.54%</td><td class="right">0%</td><td class="right"><b>27.54%</b></td></tr>
-  <tr><td>매직</td><td class="right">25.14%</td><td class="right">0%</td><td class="right"><b>25.14%</b></td></tr>
-  <tr><td>레어</td><td class="right">22.86%</td><td class="right">0%</td><td class="right"><b>22.86%</b></td></tr>
-  <tr><td>에픽</td><td class="right">4.46%</td><td class="right">10.00%</td><td class="right"><b>14.46%</b></td></tr>
-  <tr><td>레전더리</td><td class="right">0%</td><td class="right">10.00%</td><td class="right"><b>10.00%</b></td></tr>
-  <tr><th>합</th><th class="right">80%</th><th class="right">20%</th><th class="right">100.00%</th></tr>
+  <tr><th>마블 등급</th><th>보라 (70%)</th><th>황금 (30%)</th><th>합산</th></tr>
+  <tr><td>노말</td><td class="right">24.10%</td><td class="right">0%</td><td class="right"><b>24.10%</b></td></tr>
+  <tr><td>매직</td><td class="right">22.00%</td><td class="right">0%</td><td class="right"><b>22.00%</b></td></tr>
+  <tr><td>레어</td><td class="right">20.00%</td><td class="right">0%</td><td class="right"><b>20.00%</b></td></tr>
+  <tr><td>에픽</td><td class="right">3.90%</td><td class="right">15.00%</td><td class="right"><b>18.90%</b></td></tr>
+  <tr><td>레전더리</td><td class="right">0%</td><td class="right">15.00%</td><td class="right"><b>15.00%</b></td></tr>
+  <tr><th>합</th><th class="right">70%</th><th class="right">30%</th><th class="right">100.00%</th></tr>
 </table>
 
 <h2>5. 마블 해방 (Hatch)</h2>
@@ -207,8 +210,8 @@
   <tr><td>노말</td><td class="right">100%</td><td class="right">10,000</td><td class="center">1★</td></tr>
   <tr><td>매직</td><td class="right">100%</td><td class="right">20,000</td><td class="center">2★</td></tr>
   <tr><td>레어</td><td class="right">100%</td><td class="right">30,000</td><td class="center">3★</td></tr>
-  <tr><td>에픽</td><td class="right">100%</td><td class="right">50,000</td><td class="center">4★</td></tr>
-  <tr><td>레전더리</td><td class="right">100%</td><td class="right">80,000</td><td class="center">5★</td></tr>
+  <tr><td>에픽</td><td class="right">100%</td><td class="right">60,000</td><td class="center">4★</td></tr>
+  <tr><td>레전더리</td><td class="right">100%</td><td class="right">100,000</td><td class="center">5★</td></tr>
 </table>
 <div class="info">마블 해방 = <b>확률형 X, 확정 결과</b>. 가챠 단계는 §4 (이벤트 구슬 → 마블 등급 풀) 가 유일.</div>
 
@@ -229,8 +232,8 @@
 <h3>노말 — 40종 (각 1/40 = 2.5%)</h3>
 <table>
   <tr><th>마블 프렌즈</th><th>확률</th><th>마블 프렌즈</th><th>확률</th><th>마블 프렌즈</th><th>확률</th><th>마블 프렌즈</th><th>확률</th></tr>
-  <tr><td>가든일</td><td class="right">2.5%</td><td>가리비</td><td class="right">2.5%</td><td>가시나비고기</td><td class="right">2.5%</td><td>갈색가오리</td><td class="right">2.5%</td></tr>
-  <tr><td>갯민숭달팽이</td><td class="right">2.5%</td><td>고등어</td><td class="right">2.5%</td><td>굴</td><td class="right">2.5%</td><td>넙치</td><td class="right">2.5%</td></tr>
+  <tr><td>가든일</td><td class="right">2.5%</td><td>가리비</td><td class="right">2.5%</td><td>가시나비고기</td><td class="right">2.5%</td><td>갯민숭달팽이</td><td class="right">2.5%</td></tr>
+  <tr><td>고등어</td><td class="right">2.5%</td><td>굴</td><td class="right">2.5%</td><td>꽃게</td><td class="right">2.5%</td><td>넙치</td><td class="right">2.5%</td></tr>
   <tr><td>노란 고비</td><td class="right">2.5%</td><td>노래미</td><td class="right">2.5%</td><td>다시마</td><td class="right">2.5%</td><td>따개비</td><td class="right">2.5%</td></tr>
   <tr><td>멍게</td><td class="right">2.5%</td><td>멸치</td><td class="right">2.5%</td><td>모래거울거미</td><td class="right">2.5%</td><td>미더덕</td><td class="right">2.5%</td></tr>
   <tr><td>미역</td><td class="right">2.5%</td><td>바다 달팽이</td><td class="right">2.5%</td><td>바지락</td><td class="right">2.5%</td><td>박스 피쉬</td><td class="right">2.5%</td></tr>
@@ -300,9 +303,9 @@
 
 <h2>8. 종합 — 특정 마블 프렌즈 1마리 누적 등장 확률 예시</h2>
 <ul>
-  <li><b>노말 마블 프렌즈 X 1마리</b>: 일반 (80%) × 보라 풀 노말 (34.43%) × 균등 (1/40) ≈ <b>0.69%</b> · 해방 100% → 도감 등록 = 0.69%</li>
-  <li><b>레전더리 마블 프렌즈 Y 1마리</b>: 비 (20%) × 황금 풀 레전더리 (50%) × 균등 (1/41) ≈ <b>0.244%</b> · 평균 약 410회 이벤트당 1회</li>
-  <li><b>에픽 마블 프렌즈 Z 1마리</b>: 보라 풀 에픽 (4.46%) × (1/40) + 황금 풀 에픽 (10%) × (1/40) ≈ <b>0.361%</b></li>
+  <li><b>노말 마블 프렌즈 X 1마리</b>: 일반 (70%) × 보라 풀 노말 (34.43%) × 균등 (1/40) ≈ <b>0.60%</b> · 해방 100% → 도감 등록 = 0.60%</li>
+  <li><b>레전더리 마블 프렌즈 Y 1마리</b>: 비 (30%) × 황금 풀 레전더리 (50%) × 균등 (1/41) ≈ <b>0.366%</b> · 평균 약 273회 이벤트당 1회 (천장 보장 미반영 기준 — 실제는 이보다 유리)</li>
+  <li><b>에픽 마블 프렌즈 Z 1마리</b>: 보라 풀 에픽 (3.90%) × (1/40) + 황금 풀 에픽 (15%) × (1/40) ≈ <b>0.47%</b></li>
 </ul>
 
 <h2>9. 별 상점 (중복 마블 교환)</h2>
