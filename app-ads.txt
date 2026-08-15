@@ -7,6 +7,9 @@ google.com, pub-2301095888840643, DIRECT, f08c47fec0942fa0
 unity.com, 142978320, DIRECT, 96cabb5fbdde37a7
 
 # ── RESELLER (Unity 미디에이션 파트너, 대시보드 생성분) ──
+# 2026-08-15 Unity 대시보드 "Show full list" 전량과 기계 대조 완료 (122줄 일치).
+# AppLovin/Vungle/Mintegral 등이 없는 것은 정상 — LevelPlay 에 미추가 네트워크는
+# Unity 판매자 목록에 나오지 않는다. 네트워크 추가 시 이 파일도 갱신할 것.
 smartadserver.com, 4610, RESELLER, 060d053dcf45cbf3
 smartadserver.com, 3964, RESELLER
 smartadserver.com, 4578, RESELLER, 060d053dcf45cbf3
