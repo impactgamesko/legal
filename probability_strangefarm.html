@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수상한 농장 — 확률 공시</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    max-width: 820px; margin: 0 auto; padding: 24px 16px 64px;
+    line-height: 1.7; color: #222; background: #fff;
+  }
+  h1 { font-size: 24px; border-bottom: 2px solid #3fa34d; padding-bottom: 8px; margin-top: 0; }
+  h2 { font-size: 18px; color: #2e7d38; margin-top: 32px; }
+  h3 { font-size: 16px; margin-top: 20px; }
+  p, li { font-size: 15px; }
+  ul, ol { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f0f7f0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .meta { color: #666; font-size: 13px; margin-top: 4px; }
+  .updated { color: #888; font-size: 13px; margin-top: 40px; }
+  .box { background: #f7fbf7; border-left: 4px solid #3fa34d; padding: 12px 14px; margin: 16px 0; }
+  .paid { background: #fff6e8; border-left: 4px solid #e8a33d; padding: 12px 14px; margin: 16px 0; }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 10px; vertical-align: 2px; }
+  .tag-paid { background: #e8a33d; color: #fff; }
+  .tag-free { background: #7aa87f; color: #fff; }
+  a { color: #2e7d38; }
+  code { background: #f3f6f3; padding: 1px 4px; border-radius: 3px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>확률형 아이템 확률 공시 — 수상한 농장</h1>
+<p class="meta">개발사: 임팩트게임즈 · 앱 패키지: com.impactgames.strangefarm · 시행일: 2026-08-26</p>
+
+<p>
+본 페이지는 게임 「수상한 농장 : 돌연변이 대소동」(영문 Strange Farm)에서 제공하는
+확률형 요소의 <strong>종류별 공급 확률</strong>을 안내합니다.
+동일한 내용은 <strong>게임 내 해당 화면에서도 확인</strong>하실 수 있습니다.
+</p>
+
+<div class="box">
+<p style="margin:0 0 6px"><strong>표기 안내</strong></p>
+<p style="margin:0">
+<span class="tag tag-paid">유료</span> 유상 재화(보석) 또는 현금 결제로 이용하는 항목 &nbsp;
+<span class="tag tag-free">무료</span> 광고 시청 또는 무상 재화(골드)로만 이용하는 항목
+</p>
+</div>
+
+<p>
+모든 확률은 <strong>매 시행마다 독립적</strong>으로 적용됩니다.
+이전 결과가 다음 결과에 영향을 주지 않으며, 누적 시행 횟수에 따라 확률이 올라가는
+이른바 "천장" 방식은 <strong>적용하지 않습니다.</strong>
+</p>
+
+<h2>1. 씨앗 뽑기</h2>
+
+<h3>1-1. 광고 뽑기 <span class="tag tag-free">무료</span></h3>
+<p>광고를 시청하고 씨앗 1개를 획득합니다. 시청 후 5분의 대기 시간이 있습니다.</p>
+<table>
+<tr><th>등급</th><th>확률</th></tr>
+<tr><td>일반</td><td class="n">20%</td></tr>
+<tr><td>고급</td><td class="n">60%</td></tr>
+<tr><td>희귀</td><td class="n">20%</td></tr>
+<tr><th>합계</th><th class="n">100%</th></tr>
+</table>
+
+<h3>1-2. 고급 뽑기 <span class="tag tag-paid">유료</span></h3>
+<p>보석 500개를 소모하여 씨앗 1개를 획득합니다. 보석은 현금으로 구매할 수 있는 유상 재화입니다.</p>
+<table>
+<tr><th>등급</th><th>확률</th></tr>
+<tr><td>희귀</td><td class="n">60%</td></tr>
+<tr><td>전설</td><td class="n">30%</td></tr>
+<tr><td>신화</td><td class="n">10%</td></tr>
+<tr><th>합계</th><th class="n">100%</th></tr>
+</table>
+
+<h3>1-3. 등급 안에서의 개별 작물 확률</h3>
+<p>
+등급이 정해진 뒤, 해당 등급에 속한 작물 중 <strong>하나가 균등한 확률로 선택</strong>됩니다.
+따라서 <strong>개별 작물의 확률 = 등급 확률 ÷ 해당 등급의 작물 종류 수</strong> 입니다.
+</p>
+<table>
+<tr><th>등급</th><th>대상 작물 종류 수</th><th>고급 뽑기 시 개별 작물 확률</th><th>광고 뽑기 시 개별 작물 확률</th></tr>
+<tr><td>일반</td><td class="n">10종</td><td class="n">—</td><td class="n">각 2.000%</td></tr>
+<tr><td>고급</td><td class="n">12종</td><td class="n">—</td><td class="n">각 5.000%</td></tr>
+<tr><td>희귀</td><td class="n">12종</td><td class="n">각 5.000%</td><td class="n">각 1.667%</td></tr>
+<tr><td>전설</td><td class="n">11종</td><td class="n">각 2.727%</td><td class="n">—</td></tr>
+<tr><td>신화</td><td class="n">11종</td><td class="n">각 0.909%</td><td class="n">—</td></tr>
+</table>
+<p>
+기본 지급 작물(딸기·당근)과 기간 한정 이벤트 전용 작물은 뽑기 대상에서 <strong>제외</strong>됩니다.
+기간 한정 이벤트가 진행 중인 경우, 신화 등급이 선택되면 해당 기간의 지정 작물이 지급될 수 있습니다.
+</p>
+
+<h2>2. 씨앗 번들 (유료 상품) <span class="tag tag-paid">유료</span></h2>
+<p>
+현금으로 구매하는 상품입니다. <strong>보석 지급량과 등급별 씨앗 개수는 확정</strong>되어 있으나,
+<strong>각 등급 안에서 어떤 작물이 지급되는지는 무작위</strong>입니다.
+상품별로 <strong>1일 1회</strong>만 구매할 수 있습니다(기준 시각: 대한민국 표준시 자정).
+</p>
+<table>
+<tr><th>상품</th><th>가격</th><th>보석 (확정)</th><th>씨앗 구성 (등급별 개수 확정 · 작물 종류는 무작위)</th></tr>
+<tr><td>희귀 작물 번들</td><td class="n">₩12,000</td><td class="n">6,000개</td><td>고급 5개 · 희귀 3개</td></tr>
+<tr><td>전설 작물 번들</td><td class="n">₩35,000</td><td class="n">20,000개</td><td>고급 5개 · 희귀 3개 · 전설 1개</td></tr>
+<tr><td>신화 작물 번들</td><td class="n">₩110,000</td><td class="n">70,000개</td><td>고급 10개 · 희귀 7개 · 전설 5개 · 신화 3개</td></tr>
+</table>
+<p>등급 안에서의 개별 작물 확률은 아래와 같습니다(균등 추출).</p>
+<table>
+<tr><th>등급</th><th>대상 작물 종류 수</th><th>개별 작물이 선택될 확률 (1개당)</th></tr>
+<tr><td>고급</td><td class="n">12종</td><td class="n">각 8.333%</td></tr>
+<tr><td>희귀</td><td class="n">12종</td><td class="n">각 8.333%</td></tr>
+<tr><td>전설</td><td class="n">11종</td><td class="n">각 9.091%</td></tr>
+<tr><td>신화</td><td class="n">11종</td><td class="n">각 9.091%</td></tr>
+</table>
+<div class="paid">
+<p style="margin:0">
+같은 작물이 중복해서 지급될 수 있습니다. 예를 들어 「고급 5개」는 서로 다른 5종을 보장하지 않으며,
+각 1개가 독립적으로 추첨됩니다.
+</p>
+</div>
+
+<h2>3. 특별 씨앗 상점 <span class="tag tag-free">무료</span></h2>
+<p>
+일정 시간마다 갱신되는 상점 슬롯입니다. 각 슬롯에 진열되는 씨앗의 등급이 아래 확률로 결정되며,
+진열된 씨앗은 <strong>골드(무상 재화)로 구매</strong>합니다. 슬롯은 게임 진행에 따라 순차적으로 열립니다.
+</p>
+<table>
+<tr><th>슬롯</th><th>일반</th><th>고급</th><th>희귀</th><th>전설</th></tr>
+<tr><td>1번</td><td class="n">100%</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+<tr><td>2번</td><td class="n">70%</td><td class="n">30%</td><td class="n">—</td><td class="n">—</td></tr>
+<tr><td>3번</td><td class="n">50%</td><td class="n">50%</td><td class="n">—</td><td class="n">—</td></tr>
+<tr><td>4번</td><td class="n">—</td><td class="n">70%</td><td class="n">30%</td><td class="n">—</td></tr>
+<tr><td>5번</td><td class="n">—</td><td class="n">45%</td><td class="n">45%</td><td class="n">10%</td></tr>
+</table>
+<p>신화 등급은 상점에 진열되지 않습니다. 등급 결정 후 개별 작물 선택은 위 1-3과 같은 균등 추출입니다.</p>
+
+<h2>4. 펫 알 부화 <span class="tag tag-free">무료</span></h2>
+<p>
+골드(무상 재화)로 구매한 펫 알을 부화시켜 펫을 획득합니다.
+알의 레벨이 높을수록 상위 등급 확률이 올라가며, 레벨은 게임 진행에 따라 상승합니다.
+</p>
+<table>
+<tr><th>알 레벨</th><th>일반</th><th>고급</th><th>희귀</th></tr>
+<tr><td>Lv.1</td><td class="n">80%</td><td class="n">20%</td><td class="n">0%</td></tr>
+<tr><td>Lv.2</td><td class="n">72%</td><td class="n">24%</td><td class="n">4%</td></tr>
+<tr><td>Lv.3</td><td class="n">64%</td><td class="n">28%</td><td class="n">8%</td></tr>
+<tr><td>Lv.4</td><td class="n">56%</td><td class="n">32%</td><td class="n">12%</td></tr>
+<tr><td>Lv.5</td><td class="n">48%</td><td class="n">36%</td><td class="n">16%</td></tr>
+<tr><td>Lv.6 (최대)</td><td class="n">40%</td><td class="n">40%</td><td class="n">20%</td></tr>
+</table>
+<p>
+이미 최대 레벨에 도달한 펫 종류는 부화 대상에서 제외되며, 남은 종류 중에서 균등하게 선택됩니다.
+모든 펫이 최대 레벨이 되면 알 판매가 종료됩니다.
+</p>
+
+<h2>5. 작물 속성 부여 <span class="tag tag-free">무료</span></h2>
+<p>
+수확 시 작물에 특수 속성이 붙을 수 있습니다. 속성 부여는 <strong>별도의 구매 없이</strong>
+수확 과정에서 자동으로 판정되며, 기본 확률은 아래와 같습니다.
+</p>
+<table>
+<tr><th>속성</th><th>기본 부여 확률</th><th>비고</th></tr>
+<tr><td>무늬</td><td class="n">40%</td><td rowspan="3">농장 시설 레벨에 따라 해당 등급 작물에<br>최대 +10%p까지 합산 가산</td></tr>
+<tr><td>원소</td><td class="n">40%</td></tr>
+<tr><td>축복 · 저주</td><td class="n">30%</td></tr>
+</table>
+<p>기본 지급 작물(딸기·당근)에는 시설 가산이 적용되지 않습니다.</p>
+
+<h2>6. 유상 재화가 관여하는 항목 요약</h2>
+<p>
+아래 항목만이 <strong>유상 재화 또는 현금 결제</strong>가 관여하는 확률형 요소입니다.
+그 밖의 항목은 광고 시청 또는 무상 재화(골드)로만 이용합니다.
+</p>
+<table>
+<tr><th>항목</th><th>지불 수단</th><th>해당 절</th></tr>
+<tr><td>고급 뽑기</td><td>보석 500개 (유상 재화)</td><td>1-2</td></tr>
+<tr><td>씨앗 번들 3종</td><td>현금 결제</td><td>2</td></tr>
+</table>
+
+<h2>7. 공시 기준 및 갱신</h2>
+<table>
+<tr><th>항목</th><th>내용</th></tr>
+<tr><td>기준 게임 버전</td><td>출시 빌드 기준 (게임 내 설정 화면에서 확인 가능)</td></tr>
+<tr><td>확률 산출 방식</td><td>게임 소스 코드의 확률표에서 직접 추출</td></tr>
+<tr><td>갱신 시점</td><td>확률이 변경되는 업데이트 시 본 페이지를 함께 갱신</td></tr>
+</table>
+<p>
+본 공시의 내용과 게임 내 표시가 다른 경우 <a href="mailto:support@impactgames.co.kr">support@impactgames.co.kr</a>로
+알려주시면 확인 후 정정하겠습니다.
+</p>
+
+<h2>사업자 정보</h2>
+<table>
+<tr><th>상호</th><td>임팩트게임즈 (Impact Games)</td></tr>
+<tr><th>대표자</th><td>정세열</td></tr>
+<tr><th>사업자등록번호</th><td>583-09-03238</td></tr>
+<tr><th>게임제작업자 등록번호</th><td>제2026-000028호</td></tr>
+<tr><th>고객 문의</th><td><a href="mailto:support@impactgames.co.kr">support@impactgames.co.kr</a></td></tr>
+</table>
+
+<p style="margin-top:24px">
+관련 문서:
+<a href="privacy_strangefarm.html">개인정보 처리방침</a> ·
+<a href="terms_strangefarm.html">이용약관</a>
+</p>
+
+<p class="updated">시행일: 2026-08-26 · 최종 개정: 2026-08-26</p>
+
+</body>
+</html>
